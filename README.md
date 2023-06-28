@@ -45,5 +45,6 @@ Como o porjeto não tinha figma, era só um PNH, eu tentei deixar o mais próxim
 
 Foi feito deploy do projeto na vercel e eu utilizei um subdomínio para redirecionar, os links são:
 
-[https://test.leadster.devprophet.com/](https://test.leadster.devprophet.com/)
-[test-for-leadster.vercel.app](test-for-leadster.vercel.app)
+- [https://test.leadster.devprophet.com/](https://test.leadster.devprophet.com/)
+
+- [test-for-leadster.vercel.app](test-for-leadster.vercel.app)

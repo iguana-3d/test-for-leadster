@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'styled-components';
 import { ICardData, gridCardsdata } from '../../base/dataCards';
 import Card from '../Card';
@@ -20,18 +20,22 @@ const GridCards: React.FC = () => {
   const firstIndex = lastIndex - perPage;
   const cards = gridCardsdata
     .filter((card) => {
-      console.log(card.category === radioSelected);
       return card.category === radioSelected;
     })
     .slice(firstIndex, lastIndex);
   const totalPages = Math.ceil(
     gridCardsdata.filter((card) => {
-      console.log(card.category === radioSelected);
       return card.category === radioSelected;
     }).length / perPage
   );
   const numbers = [...Array(totalPages + 1).keys()].slice(1);
+  const GridCardsRef = useRef<null | HTMLDivElement>(null);
   const theme = useTheme();
+
+  const scrollToGridCards = () =>
+    !!GridCardsRef &&
+    !!GridCardsRef.current &&
+    GridCardsRef.current.scrollIntoView();
 
   useEffect(() => {
     setPage(1);
@@ -39,7 +43,7 @@ const GridCards: React.FC = () => {
 
   return (
     <GridCardsContainer>
-      <div className="grid-cards-control">
+      <div className="grid-cards-control" ref={GridCardsRef}>
         <div className="radio-group">
           <input
             type="radio"
@@ -145,7 +149,10 @@ const GridCards: React.FC = () => {
             <ButtonNumber
               isActive={page === numberPage}
               key={numberPage}
-              onClick={() => setPage(numberPage)}
+              onClick={() => {
+                setPage(numberPage);
+                scrollToGridCards();
+              }}
             >
               {numberPage}
             </ButtonNumber>

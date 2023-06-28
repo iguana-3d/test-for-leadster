@@ -3,49 +3,49 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
 @font-face {
   font-family: 'PlusJakartaSans';
-  src: url(/public/static/fonts/PlusJakartaSans/PlusJakartaSans-Light.ttf)
+  src: url('/static/fonts/PlusJakartaSans/PlusJakartaSans-Light.ttf')
     format('opentype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'PlusJakartaSans';
-  src: url(/public/static/fonts/PlusJakartaSans/PlusJakartaSans-Regular.ttf)
+  src: url('/static/fonts/PlusJakartaSans/PlusJakartaSans-Regular.ttf')
     format('opentype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'PlusJakartaSans';
-  src: url(/public/static/fonts/PlusJakartaSans/PlusJakartaSans-Regular.ttf)
+  src: url('/static/fonts/PlusJakartaSans/PlusJakartaSans-Regular.ttf')
     format('opentype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'PlusJakartaSans';
-  src: url(/public/static/fonts/PlusJakartaSans/PlusJakartaSans-Medium.ttf)
+  src: url('/static/fonts/PlusJakartaSans/PlusJakartaSans-Medium.ttf')
     format('opentype');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'PlusJakartaSans';
-  src: url(/public/static/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold.ttf)
+  src: url('/static/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold.ttf')
     format('opentype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'PlusJakartaSans';
-  src: url(/public/static/fonts/PlusJakartaSans/PlusJakartaSans-Bold.ttf)
+  src: url('/static/fonts/PlusJakartaSans/PlusJakartaSans-Bold.ttf')
     format('opentype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'PlusJakartaSans';
-  src: url(/public/static/fonts/PlusJakartaSans/PlusJakartaSans-Bold.ttf)
+  src: url('/static/fonts/PlusJakartaSans/PlusJakartaSans-Bold.ttf')
     format('opentype');
   font-weight: bold;
 }
@@ -78,10 +78,6 @@ body {
    font-weight: ${(props) => props.theme.typeFaceWeight.regular};
    font-size: 1.6rem;
    line-height: 1.6;
-   background-image: url('/static/images/background.jpg');
-   background-attachment: fixed;
-   background-size: cover;
-   background-position: center;
 }
 
 h1 {
