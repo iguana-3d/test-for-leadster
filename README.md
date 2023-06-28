@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teste para Leadster
 
-## Getting Started
+## Minhas decisões
 
 First, run the development server:
 
@@ -10,26 +10,48 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Neste projeto eu tentei utilizar o Next 13 com styled-components, porém como o next 13 é recente, ainda temos bugs de integração com styled. Mesmo eu utilizando o tutorial da vercel, percebo que ainda temos bugs e erros.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Mesmo procurando no github e stack overflow, não se tem uma solução, pelo menos eu não encontrei.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Como eu tenho conhecimento e sei que funciona perfeitamente, eu utilizei:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Next 13.4.7
+- Styled-components 5.3.6
+- Typescript 5.1.3
 
-## Learn More
+## Organização
 
-To learn more about Next.js, take a look at the following resources:
+Geralmente eu projetos eu prezo estrutura de estilização e tipagem. Neste projeto eu utilizei uma estrutura que montei com theme provider e global styles, onde me permite criar multiplos temas e integrar com os contextos para tornar isso possível.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Na pasta de components temos os componentes reutilizáveis no projetos, junto com componentes de página, pois o Next não permite criar outras subpastas sem que sejam rotas, pelo menos nesta versão.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+O componente de gridCards pode ser modificado e tipado, deixei dessa maneira, pois pode ser utilizado somente na HOme, mas se por ventura for ser utilizado em outra parte, o mesmo é fácilmente alterado e convertido em reutilizável.
 
-## Deploy on Vercel
+Dentro da pasta Base temos um tsx que retorna os dados utilizados nos vídeos. Eu acessei o canal da Leadster e peguei os links dos vídeos e montei uma array para que eu possa mostrar nos modais.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Como iniciar o projeto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# test-for-leadster
+Dê um git clone em [https://github.com/iguana-3d/test-for-leadster.git](https://github.com/iguana-3d/test-for-leadster.git) e após isso no terminal:
+
+```bash
+npm install
+#ou
+yarn install
+# e após istalar as dependências digite
+npm run dev
+#ou
+yarn dev
+#para iniciar o projeto
+```
+
+## Observações
+
+Como o porjeto não tinha figma, era só um PNH, eu tentei deixar o mais próximo possível do que estava no PNG. Para uma maior precisão seria interessante disponibilizar um link para o Figma do projeto, fora também que algumas coisas não temos, como por exemplo um triângulo na sessão de ver demonstração.
+
+## Deploy
+
+Foi feito deploy do projeto na vercel e eu utilizei um subdomínio para redirecionar, os links são:
+
+[https://test.leadster.devprophet.com/](https://test.leadster.devprophet.com/)
+[test-for-leadster.vercel.app](test-for-leadster.vercel.app)
