@@ -4,25 +4,18 @@ import baseTheme from './baseTheme';
 import { IShadowOptions, ICustomShadowOptions } from './theme.types';
 //Name color identify in: https://www.color-name.com/hex
 
-const brandPrimary = {
+const others = {
   yellow: {
     1: '#FFF9DE',
-    2: '#FFED9C',
-    3: '#FFE054',
-    4: '#FFD100',
-    5: '#FFC148',
-    6: '#FFA800',
-    7: '#FFC700',
-    8: '#FFC727',
-    9: '#D88100',
-    10: '#FFB72C',
   },
   blue: {
-    1: '#8AB9FF',
-    2: '#3C81EA',
-    3: '#1C61CA',
-    4: '#003D9A',
-    5: '#1E90FF',
+    1: '#F0F8FF',
+    2: '#0077F4',
+    3: '#1F76F0',
+    4: '#1C3C50',
+    5: '#C8D4DD',
+    6: '#007EFF',
+    7: '#70cff7',
   },
   purple: {
     1: '#623CEA',
@@ -31,14 +24,6 @@ const brandPrimary = {
   },
   red: {
     1: '#D92B6A',
-    2: '#E20051',
-    3: '#E41A3E',
-    4: '#DE0F34',
-    5: '#B1003F',
-    6: '#AA001E',
-    7: '#C45300',
-    8: '#FF2E00',
-    9: '#D14B00',
   },
   brown: {
     1: '#57001F',
@@ -49,15 +34,11 @@ const brandPrimary = {
   },
   green: {
     1: '#7CD3A1',
-    2: '#03A749',
-    3: '#219653',
-    4: '#006129',
-    5: '#00421C',
   },
   gray: {
-    1: '#FAFAFA',
-    2: '#D7D7D7',
-    3: '#BABABB',
+    1: '#f7f8fb',
+    2: '#838eab',
+    3: '#d5d9dd',
     4: '#A6A6A6',
     5: '#929292',
     6: '#808080',
@@ -75,23 +56,23 @@ const brandPrimary = {
 };
 
 const primary = {
-  main: brandPrimary.yellow[6],
+  main: others.yellow[1],
 };
 
 const info = {
-  main: brandPrimary.blue[2],
+  main: others.blue[2],
 };
 
 const success = {
-  main: brandPrimary.green[3],
+  main: others.green[1],
 };
 
 const warning = {
-  main: brandPrimary.yellow[6],
+  main: others.yellow[1],
 };
 
 const error = {
-  main: brandPrimary.red[1],
+  main: others.red[1],
 };
 
 const common = {
@@ -101,13 +82,13 @@ const common = {
 
 const text = {
   primary: common.black,
-  secondary: brandPrimary.gray[7],
+  secondary: others.gray[7],
   disabled: 'rgba(91, 91, 91, 0.8)',
 };
 
 const background = {
-  paper: brandPrimary.gray[1],
-  default: brandPrimary.gray[1],
+  paper: others.gray[1],
+  default: others.gray[1],
   neutral: common.white,
 };
 
@@ -116,7 +97,7 @@ const background = {
 //***********************************************
 
 const gradients = {
-  gradient01: `linear-gradient(86.46deg, ${brandPrimary.yellow[7]} 0%, ${brandPrimary.yellow[6]} 65.35%)`,
+  gradient01: `linear-gradient(86.46deg, ${others.yellow[1]} 0%, ${others.yellow[1]} 65.35%)`,
 };
 
 //***********************************************
@@ -130,7 +111,7 @@ const colors = {
   warning: warning,
   info: info,
   success: success,
-  brandPrimary: brandPrimary,
+  others: others,
   text: text,
   backgrounds: background,
 };
@@ -150,7 +131,7 @@ const createShadows = (color: string): IShadowOptions => {
     n16: `0 16px 32px -4px ${transparent}`,
     n20: `0 20px 40px -4px ${transparent}`,
     n24: `0 24px 48px 0 ${transparent}`,
-    primary: `0 15px 30px 0 ${lighten(0.2, brandPrimary.gray[6])}`,
+    primary: `0 15px 30px 0 ${lighten(0.2, others.gray[6])}`,
     info: `0 8px 16px 0 ${lighten(0.2, colors.info.main)}`,
     success: `0 8px 16px 0 ${lighten(0.2, colors.success.main)}`,
     warning: `0 8px 16px 0 ${lighten(0.2, colors.warning.main)}`,
@@ -181,7 +162,7 @@ const theme = {
     inputs: {},
     button: {
       backgrounds: {
-        gradient: `linear-gradient(180deg, ${brandPrimary.yellow[4]}  0%, ${brandPrimary.yellow[6]} 100%)`,
+        gradient: `linear-gradient(180deg, ${others.yellow[1]}  0%, ${others.yellow[1]} 100%)`,
       },
     },
   },
@@ -189,7 +170,7 @@ const theme = {
     colors: colors,
     gradients: gradients,
     shadows: {
-      default: createShadows(brandPrimary.gray[5]),
+      default: createShadows(others.gray[5]),
       custom: customShadows,
     },
   },

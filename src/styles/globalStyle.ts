@@ -25,7 +25,7 @@ html {
 }
 
 body {
-   font-family: 'Inter', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-weight: ${(props) => props.theme.typeFaceWeight.regular};
    font-size: 1.6rem;
    line-height: 1.6;
@@ -36,51 +36,59 @@ body {
 }
 
 h1 {
-   font-family: 'Inter', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-size: 4.8rem;
    font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
-   color: ${(props) => props.theme.pallete.colors.text.primary};
-   line-height: 4rem;
+   color: ${(props) => props.theme.pallete.colors.others.blue[4]};
+   line-height: 5.2rem;
 }
 
 h2 {
-   font-family: 'Inter', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-size: 3.2rem;
    font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
-   color: ${(props) => props.theme.pallete.colors.text.primary};
-   line-height: 3.4rem;
+   color: ${(props) => props.theme.pallete.colors.others.blue[4]};
+   line-height: 4.4rem;
    margin-bottom: 1.6rem;
 }
 
 h3 {
-   font-family: 'Inter', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-size: 2rem;
    font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
-   color: ${(props) => props.theme.pallete.colors.text.primary};
-   line-height: 2.4rem;
-   margin-bottom: 0.8rem;
+   color: ${(props) => props.theme.pallete.colors.others.blue[4]};
+   line-height: 4rem;
+   margin-bottom: 1.6rem;
 }
 
 h4 {
-   font-family: 'Inter', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-size: 1.6rem;
    font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
-   color: ${(props) => props.theme.pallete.colors.text.primary};
-   line-height: 2.4rem;
-   margin-bottom: 0.8rem;
+   color: ${(props) => props.theme.pallete.colors.others.blue[4]};
+   line-height: 3.2rem;
+   margin-bottom: 1.6rem;
 }
 
 p {
-   font-family: 'Inter', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    font-size: 1.6rem;
    font-weight: ${(props) => props.theme.typeFaceWeight.regular};
-   color: ${(props) => props.theme.pallete.colors.brandPrimary.gray[10]};
+   color: ${(props) => props.theme.pallete.colors.others.blue[4]};
    line-height: 2.4rem;
 }
 
 span {
-   font-family: 'Inter', sans-serif;
-   color: ${(props) => props.theme.pallete.colors.brandPrimary.gray[10]};
+   font-family: 'Open Sans', sans-serif;
+   color: ${(props) => props.theme.pallete.colors.others.gray[10]};
    font-size: 1.4rem;
+}
+
+label {
+   color: ${(props) => props.theme.pallete.colors.others.blue[4]};
+}
+
+picture {
+   line-height: 0;
 }
 `;

@@ -4,6 +4,8 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../styles/globalStyle';
 import themes from '../styles/theme';
+import NavBar from '../layouts/Navbar';
+import Footer from '../layouts/Footer';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -13,7 +15,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={themes.themeLight}>
         <GlobalStyle />
+        <NavBar />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </React.Fragment>
   );
