@@ -1,5 +1,5 @@
 import React from 'react';
-import GridCards from '../../components/GridCards';
+import GridCards from '../../../GridCards';
 import { GridSectionContainer } from './styles';
 
 const GridSection: React.FC = () => {

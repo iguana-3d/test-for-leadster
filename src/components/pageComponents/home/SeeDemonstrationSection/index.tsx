@@ -1,6 +1,6 @@
 import React from 'react';
 import { SeeDemonstrationSectionContainer } from './styles';
-import Button from '../../components/buttons/Button';
+import Button from '../../../buttons/Button';
 
 const SeeDemonstrationSection: React.FC = () => {
   return (
