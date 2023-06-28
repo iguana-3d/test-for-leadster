@@ -9,6 +9,13 @@ export const GridCardsContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 0.8rem;
+
+    @media ${(props) => props.theme.medias.laptopSmall} {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
   }
 
   .grid-cards {
@@ -99,6 +106,10 @@ export const GridCardsContainer = styled.div`
     align-items: center;
     gap: 0.8rem;
     margin-left: auto;
+
+    @media ${(props) => props.theme.medias.laptopSmall} {
+      margin-left: initial;
+    }
 
     span {
       color: ${(props) => props.theme.pallete.colors.others.blue[4]};

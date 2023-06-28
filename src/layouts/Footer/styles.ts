@@ -139,10 +139,11 @@ export const FooterContainer = styled.footer`
       text-decoration: none;
       width: max-content;
       padding: 0.8rem 0;
+      color: ${(props) => props.theme.pallete.colors.others.blue[4]};
     }
 
     &:hover {
-      font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
+      color: ${(props) => props.theme.pallete.colors.common.black};
     }
   }
 `;

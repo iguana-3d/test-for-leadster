@@ -116,18 +116,18 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer-line" />
       <div className="footer-copyright">
-        <div>
+        <p>
           Copyright &copy; 2015 - {year} Todos os direitos reservados |{' '}
           <Link href="/" className="footer-copyright-link">
             Leadster
           </Link>
-        </div>
-        <div>
+        </p>
+        <p>
           Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 080010-000 |{' '}
           <Link href="/" target="_blank" className="footer-copyright-terms">
             Termos de uso
           </Link>
-        </div>
+        </p>
       </div>
     </FooterContainer>
   );

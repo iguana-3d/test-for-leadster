@@ -70,7 +70,10 @@ export const LightBoxVideoContainer = styled.div<IProps>`
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: ${(props) =>
+      `rgba(${props.theme.functions.parseToRgb(
+        props.theme.pallete.colors.others.blue[4]
+      )}, 0.6)`};
     z-index: 1100;
   }
 

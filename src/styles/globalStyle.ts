@@ -80,7 +80,7 @@ p {
 
 span {
    font-family: 'Open Sans', sans-serif;
-   color: ${(props) => props.theme.pallete.colors.others.gray[10]};
+   color: ${(props) => props.theme.pallete.colors.others.blue[4]};
    font-size: 1.4rem;
 }
 

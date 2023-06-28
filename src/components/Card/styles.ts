@@ -18,18 +18,8 @@ export const CardContainer = styled.div`
     color: ${(props) => props.theme.pallete.colors.others.blue[6]};
   }
 
-  &:hover .icon-play-box svg {
-    color: ${(props) => props.theme.pallete.colors.others.blue[2]};
-    filter: ${(
-      props
-    ) => `drop-shadow(0 0 5px rgba(${props.theme.functions.parseToRgb(
-      props.theme.pallete.colors.common.black
-    )}, 0.1)) drop-shadow(0 0 10px rgba(${props.theme.functions.parseToRgb(
-      props.theme.pallete.colors.common.black
-    )}, 0.2))
-      drop-shadow(0 0 15px rgba(${props.theme.functions.parseToRgb(
-        props.theme.pallete.colors.common.black
-      )}, 0.3))`};
+  &:hover .icon-play-box {
+    opacity: 1;
   }
 
   h3 {
@@ -57,6 +47,7 @@ export const CardContainer = styled.div`
       `rgba(${props.theme.functions.parseToRgb(
         props.theme.pallete.colors.others.blue[2]
       )}, 0.3)`};
+    opacity: 0;
 
     display: flex;
     align-items: center;
