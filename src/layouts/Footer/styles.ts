@@ -75,6 +75,12 @@ export const FooterContainer = styled.footer`
     justify-content: space-between;
     gap: 3rem;
 
+    p {
+      @media ${(props) => props.theme.medias.mobile} {
+        text-align: center;
+      }
+    }
+
     @media ${(props) => props.theme.medias.laptopSmall} {
       flex-direction: column;
       align-items: center;

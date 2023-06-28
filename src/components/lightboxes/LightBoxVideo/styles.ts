@@ -74,10 +74,6 @@ export const LightBoxVideoContainer = styled.div<IProps>`
     ::-webkit-scrollbar {
       width: 16px;
     }
-
-    @media ${(props) => props.theme.medias.mobile} {
-      padding-top: 9rem;
-    }
   }
 
   .icon-box {
