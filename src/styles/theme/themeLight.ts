@@ -6,7 +6,9 @@ import { IShadowOptions, ICustomShadowOptions } from './theme.types';
 
 const others = {
   yellow: {
-    1: '#FFF9DE',
+    1: '#a68e1c',
+    2: '#fff1a0',
+    3: '#fff8d0',
   },
   blue: {
     1: '#F0F8FF',
@@ -16,6 +18,9 @@ const others = {
     5: '#C8D4DD',
     6: '#0083ff',
     7: '#70cff7',
+    8: '#0083ee',
+    9: '#a1d9ff',
+    10: '#c2e6ff',
   },
   purple: {
     1: '#623CEA',
@@ -34,6 +39,9 @@ const others = {
   },
   green: {
     1: '#7CD3A1',
+    2: '#00b78f',
+    3: '#9fefdf',
+    4: '#c2f4ea',
   },
   gray: {
     1: '#f7f8fb',
@@ -52,6 +60,9 @@ const others = {
     14: '#919EAB',
     15: '#121212',
     16: '#EBEBEB',
+    17: '#77848c',
+    18: '#d0dee7',
+    19: '#e8eef3',
   },
 };
 

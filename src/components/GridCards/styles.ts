@@ -142,3 +142,41 @@ export const ButtonNumber = styled.div<IButtonNumberProps>`
       color: ${(props) => props.theme.pallete.colors.others.blue[2]};
     `}
 `;
+
+export const CardModalContainer = styled.div`
+  h3 {
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: ${(props) => props.theme.typeFaceWeight.bold};
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+
+    span {
+      font-size: 2.4rem;
+      font-weight: ${(props) => props.theme.typeFaceWeight.bold};
+      color: ${(props) => props.theme.pallete.colors.others.blue[6]};
+    }
+  }
+
+  .card-modal-texts {
+    padding: 1.6rem 3rem 0;
+
+    h4 {
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid
+        ${(props) => props.theme.pallete.colors.others.gray[3]};
+    }
+
+    p {
+      margin-bottom: 1.6rem;
+      font-weight: ${(props) => props.theme.typeFaceWeight.medium};
+    }
+  }
+
+  .card-modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+`;

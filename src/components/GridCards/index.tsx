@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { ButtonNumber, GridCardsContainer } from './styles';
+import { ButtonNumber, CardModalContainer, GridCardsContainer } from './styles';
 import Card from '../Card';
 import { v4 as uuidv4 } from 'uuid';
 import LightBox from '../lightboxes/LightBoxVideo';
 import moment, { Moment } from 'moment';
 import Select from '../Select';
+import DownloadItemsModal from '../buttons/DownloadItemsModal';
+import { useTheme } from 'styled-components';
 
 interface ICardData {
   id: string;
@@ -32,7 +34,7 @@ const gridCardsdata: ICardData[] = [
       />
     ),
     description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     createdAt: moment().subtract(1, 'd'),
   },
   {
@@ -52,7 +54,7 @@ const gridCardsdata: ICardData[] = [
       />
     ),
     description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     createdAt: moment().subtract(2, 'd'),
   },
   {
@@ -71,7 +73,7 @@ const gridCardsdata: ICardData[] = [
       />
     ),
     description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     createdAt: moment().subtract(3, 'd'),
   },
   {
@@ -90,7 +92,7 @@ const gridCardsdata: ICardData[] = [
       ></iframe>
     ),
     description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     createdAt: moment().subtract(4, 'd'),
   },
   {
@@ -109,7 +111,7 @@ const gridCardsdata: ICardData[] = [
       ></iframe>
     ),
     description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     createdAt: moment().subtract(1, 'd'),
   },
   {
@@ -128,7 +130,7 @@ const gridCardsdata: ICardData[] = [
       ></iframe>
     ),
     description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     createdAt: moment().subtract(3, 'd'),
   },
 ];
@@ -145,6 +147,7 @@ const GridCards: React.FC = () => {
   const cards = gridCardsdata.slice(firstIndex, lastIndex);
   const totalPages = Math.ceil(gridCardsdata.length / perPage);
   const numbers = [...Array(totalPages + 1).keys()].slice(1);
+  const theme = useTheme();
 
   return (
     <GridCardsContainer>
@@ -250,15 +253,75 @@ const GridCards: React.FC = () => {
         <LightBox
           customLightboxWidth="70rem"
           handleOpenModal={() => setIsOpenVideoLightbox((prev) => !prev)}
+          buttonsLeft={[
+            <DownloadItemsModal
+              key={1}
+              iconBackground={theme.pallete.colors.others.green[3]}
+              textAndIconColor={theme.pallete.colors.others.green[2]}
+              textBackground={theme.pallete.colors.others.green[4]}
+              text="Spreadsheet.xls"
+            />,
+            <DownloadItemsModal
+              key={2}
+              iconBackground={theme.pallete.colors.others.blue[9]}
+              textAndIconColor={theme.pallete.colors.others.blue[8]}
+              textBackground={theme.pallete.colors.others.blue[10]}
+              text="Document.doc"
+            />,
+            <DownloadItemsModal
+              key={3}
+              iconBackground={theme.pallete.colors.others.yellow[2]}
+              textAndIconColor={theme.pallete.colors.others.yellow[1]}
+              textBackground={theme.pallete.colors.others.yellow[3]}
+              text="Presentation.ppt"
+            />,
+            <DownloadItemsModal
+              key={4}
+              iconBackground={theme.pallete.colors.others.gray[18]}
+              textAndIconColor={theme.pallete.colors.others.gray[17]}
+              textBackground={theme.pallete.colors.others.gray[19]}
+              text="Folder.zip"
+            />,
+          ]}
         >
-          <h3>
-            <span>Webinar:</span>
-            {cardData.title}
-          </h3>
-          <div className="iframe-container">{cardData.iframe}</div>
-          <h4>Descrição</h4>
-          <p>{cardData.description}</p>
-          <h4>Downloads</h4>
+          <CardModalContainer>
+            <h3>
+              <span>Webinar:</span>&nbsp;
+              {cardData.title}
+            </h3>
+            <div className="iframe-container">{cardData.iframe}</div>
+            <div className="card-modal-texts">
+              <h4>Descrição</h4>
+              <p>{cardData.description}</p>
+              <h4>Downloads</h4>
+              <div className="card-modal-buttons">
+                <DownloadItemsModal
+                  iconBackground={theme.pallete.colors.others.green[3]}
+                  textAndIconColor={theme.pallete.colors.others.green[2]}
+                  textBackground={theme.pallete.colors.others.green[4]}
+                  text="Spreadsheet.xls"
+                />
+                <DownloadItemsModal
+                  iconBackground={theme.pallete.colors.others.blue[9]}
+                  textAndIconColor={theme.pallete.colors.others.blue[8]}
+                  textBackground={theme.pallete.colors.others.blue[10]}
+                  text="Document.doc"
+                />
+                <DownloadItemsModal
+                  iconBackground={theme.pallete.colors.others.yellow[2]}
+                  textAndIconColor={theme.pallete.colors.others.yellow[1]}
+                  textBackground={theme.pallete.colors.others.yellow[3]}
+                  text="Presentation.ppt"
+                />
+                <DownloadItemsModal
+                  iconBackground={theme.pallete.colors.others.gray[18]}
+                  textAndIconColor={theme.pallete.colors.others.gray[17]}
+                  textBackground={theme.pallete.colors.others.gray[19]}
+                  text="Folder.zip"
+                />
+              </div>
+            </div>
+          </CardModalContainer>
         </LightBox>
       )}
     </GridCardsContainer>

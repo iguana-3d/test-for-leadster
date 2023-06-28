@@ -18,6 +18,34 @@ export const LightBoxVideoContainer = styled.div<IProps>`
   z-index: 1000;
   ${(props) => props.theme.mixins.containerGridDefault};
 
+  .buttons-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    background-color: ${(props) =>
+      props.theme.pallete.colors.backgrounds.neutral};
+    z-index: 1200;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    @media ${(props) => props.theme.medias.laptopSmall} {
+      display: none;
+    }
+  }
+
+  .background-above {
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background: ${(props) => props.theme.pallete.colors.others.blue[6]};
+  }
+
   .light-box-content {
     grid-column: center-start / center-end;
     position: relative;
@@ -30,7 +58,7 @@ export const LightBoxVideoContainer = styled.div<IProps>`
     background-color: ${(props) =>
       props.theme.pallete.colors.backgrounds.neutral};
     border-radius: 2rem;
-    padding: 6rem 0 3rem;
+    padding: 3rem 0;
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 1200;
@@ -54,8 +82,8 @@ export const LightBoxVideoContainer = styled.div<IProps>`
 
   .icon-box {
     position: absolute;
-    top: 1.6rem;
-    right: 1.6rem;
+    top: 1rem;
+    right: 1rem;
     padding: 0.8rem;
     cursor: pointer;
 

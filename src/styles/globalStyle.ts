@@ -38,7 +38,7 @@ body {
 h1 {
    font-family: 'Open Sans', sans-serif;
    font-size: 4.8rem;
-   font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
+   font-weight: ${(props) => props.theme.typeFaceWeight.bold};
    color: ${(props) => props.theme.pallete.colors.others.blue[4]};
    line-height: 5.2rem;
 }
@@ -46,7 +46,7 @@ h1 {
 h2 {
    font-family: 'Open Sans', sans-serif;
    font-size: 3.2rem;
-   font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
+   font-weight: ${(props) => props.theme.typeFaceWeight.bold};
    color: ${(props) => props.theme.pallete.colors.others.blue[4]};
    line-height: 4.4rem;
    margin-bottom: 1.6rem;
@@ -55,7 +55,7 @@ h2 {
 h3 {
    font-family: 'Open Sans', sans-serif;
    font-size: 2rem;
-   font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
+   font-weight: ${(props) => props.theme.typeFaceWeight.bold};
    color: ${(props) => props.theme.pallete.colors.others.blue[4]};
    line-height: 4rem;
    margin-bottom: 1.6rem;
@@ -64,7 +64,7 @@ h3 {
 h4 {
    font-family: 'Open Sans', sans-serif;
    font-size: 1.6rem;
-   font-weight: ${(props) => props.theme.typeFaceWeight.semiBold};
+   font-weight: ${(props) => props.theme.typeFaceWeight.bold};
    color: ${(props) => props.theme.pallete.colors.others.blue[4]};
    line-height: 3.2rem;
    margin-bottom: 1.6rem;
