@@ -42,8 +42,8 @@ const GridCards: React.FC = () => {
   }, [radioSelected]);
 
   return (
-    <GridCardsContainer>
-      <div className="grid-cards-control" ref={GridCardsRef}>
+    <GridCardsContainer ref={GridCardsRef}>
+      <div className="grid-cards-control">
         <div className="radio-group">
           <input
             type="radio"
