@@ -71,6 +71,10 @@ export const GridCardsContainer = styled.div`
     gap: 1.6rem;
     margin: 3rem 0;
 
+    @media ${(props) => props.theme.medias.laptopSmall} {
+      justify-content: center;
+    }
+
     .label-button {
       border-radius: 100px;
       padding: 0.4rem 2rem;

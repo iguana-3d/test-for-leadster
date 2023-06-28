@@ -12,6 +12,12 @@ export const FooterContainer = styled.footer`
       flex-direction: column;
       align-items: center;
       margin-bottom: 3rem;
+      gap: 1.6rem;
+
+      p {
+        color: ${(props) => props.theme.pallete.colors.others.gray[2]};
+        text-align: center;
+      }
     }
 
     .grid-links {

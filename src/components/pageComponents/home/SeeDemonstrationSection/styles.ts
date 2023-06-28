@@ -5,6 +5,20 @@ export const SeeDemonstrationSectionContainer = styled.div`
   ${(props) => props.theme.mixins.containerGridDefault};
   background: ${(props) => props.theme.pallete.colors.others.blue[1]};
   padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+
+  .see-demonstration-background-icon-box {
+    position: absolute;
+    left: -48rem;
+    bottom: -70rem;
+    z-index: 1;
+
+    img {
+      width: 160rem;
+      transform: rotate(270deg);
+    }
+  }
 
   .content {
     grid-column: full-start / full-end;
@@ -14,6 +28,7 @@ export const SeeDemonstrationSectionContainer = styled.div`
 
     display: flex;
     gap: 3rem;
+    z-index: 2;
 
     @media ${(props) => props.theme.medias.laptopSmall} {
       flex-direction: column-reverse;
@@ -40,6 +55,10 @@ export const SeeDemonstrationSectionContainer = styled.div`
       h2 {
         display: flex;
         flex-direction: column;
+
+        > :nth-child(1) {
+          font-weight: ${(props) => props.theme.typeFaceWeight.medium};
+        }
 
         @media ${(props) => props.theme.medias.laptopSmall} {
           text-align: center;

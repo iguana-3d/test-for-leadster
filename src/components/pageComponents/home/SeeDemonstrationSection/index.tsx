@@ -5,6 +5,16 @@ import Button from '../../../buttons/Button';
 const SeeDemonstrationSection: React.FC = () => {
   return (
     <SeeDemonstrationSectionContainer>
+      <div className="see-demonstration-background-icon-box">
+        <picture>
+          <source srcSet="/static/images/play.png" type="image/png" />
+          <img
+            className="nav-bar-image"
+            src="/static/images/comparativo.png"
+            alt="logo"
+          />
+        </picture>
+      </div>
       <div className="content">
         <div className="content-left">
           <picture>

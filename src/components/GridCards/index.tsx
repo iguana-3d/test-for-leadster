@@ -1,13 +1,11 @@
-import moment from 'moment';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from 'styled-components';
-import { v4 as uuidv4 } from 'uuid';
+import { ICardData, gridCardsdata } from '../../base/dataCards';
 import Card from '../Card';
 import Select from '../Select';
 import DownloadItemsModal from '../buttons/DownloadItemsModal';
 import LightBox from '../lightboxes/LightBoxVideo';
 import { ButtonNumber, CardModalContainer, GridCardsContainer } from './styles';
-import { ICardData, gridCardsdata } from '../../base/dataCards';
 
 const GridCards: React.FC = () => {
   const [isOpenVideoLightbox, setIsOpenVideoLightbox] =
@@ -34,6 +32,10 @@ const GridCards: React.FC = () => {
   );
   const numbers = [...Array(totalPages + 1).keys()].slice(1);
   const theme = useTheme();
+
+  useEffect(() => {
+    setPage(1);
+  }, [radioSelected]);
 
   return (
     <GridCardsContainer>
