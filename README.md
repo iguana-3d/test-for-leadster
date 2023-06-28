@@ -2,14 +2,6 @@
 
 ## Minhas decisões
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
 Neste projeto eu tentei utilizar o Next 13 com styled-components, porém como o next 13 é recente, ainda temos bugs de integração com styled. Mesmo eu utilizando o tutorial da vercel, percebo que ainda temos bugs e erros.
 
 Mesmo procurando no github e stack overflow, não se tem uma solução, pelo menos eu não encontrei.
